@@ -15,15 +15,15 @@ sidebarBtn.addEventListener('click', () => {
   sidebar.classList.toggle('close');
 });
 
-//currency
-var uang = 1000000;
+//currency=======================================================================================================================================
+var uang = 10000000;
 var click = 1;
 var autoClick = 0;
 var multiplier = 1;
 
 //time
 var autoTime = 1000;
-var timeDisplay = 0;
+var timeDisplay = 1;
 
 //upgrade
 var hargaUpgrade = 25;
@@ -120,11 +120,22 @@ function tangerang(){
         autoTime -= 300;
         multiplier += 1;
         hargaPindah = hargaPindah * 10;
-          
+        updateTime();
     }
     
 }
 
+function updateTime(){
+    if(autoTime==100){
+      timeDisplay = 0.1; 
+    } else if(autoTime==400){
+      timeDisplay = 0.4; 
+    } else if(autoTime==700){
+      timeDisplay = 0.7; 
+    } else {
+      timeDisplay = 1; 
+    }
+}
 
 function clicking() {
   uang += click * multiplier;
@@ -138,24 +149,10 @@ function clicking() {
   }, 200);
 }
 
-setInterval(function () {
-  uang += autoClick * multiplier;
-}, autoTime); // 1000ms = 1s
-
-setInterval(function () {
-  if(autoTime<101){
-    timeDisplay = autoTime - 99;
-    
-  } else if(autoTime<401){
-    timeDisplay = autoTime - 396;
-    
-  } else if(autoTime<701){
-    timeDisplay = autoTime - 693;
-    
-  } else {
-    timeDisplay = autoTime - 999;
-  }
-}, 100);
+// Auto Clicker
+  setInterval(function () {
+    uang += autoClick * multiplier;
+  }, autoTime);
 
 //Music =========================================================================================================================================
 
