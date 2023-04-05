@@ -23,7 +23,7 @@ var multiplier = 1;
 
 //time
 var autoTime = 1000;
-var timeDisplay = 0;
+var timeDisplay = 1;
 
 //upgrade
 var hargaUpgrade = 25;
@@ -120,6 +120,19 @@ function tangerang(){
         autoTime -= 300;
         multiplier += 1;
         hargaPindah = hargaPindah * 10;
+        updateTime();
+    }
+}
+
+function updateTime(){
+    if(autoTime==100){
+      timeDisplay = 0.1; 
+    } else if(autoTime==400){
+      timeDisplay = 0.4; 
+    } else if(autoTime==700){
+      timeDisplay = 0.7; 
+    } else {
+      timeDisplay = 1; 
     }
 }
 
