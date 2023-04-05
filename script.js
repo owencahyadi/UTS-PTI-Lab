@@ -16,7 +16,7 @@ sidebarBtn.addEventListener('click', () => {
 });
 
 //currency
-var uang = 100000000;
+var uang = 1000000;
 var click = 1;
 var autoClick = 0;
 var multiplier = 1;
@@ -41,23 +41,8 @@ setInterval(function () {
   document.getElementById('uang').innerHTML = uang;
   document.getElementById('click').innerHTML = click * multiplier;
   document.getElementById('autoClick').innerHTML = autoClick * multiplier;
-
-  if(autoTime<101){
-    timeDisplay = autoTime;
-    timeDisplay - 99;
-    document.getElementById('autoTime').innerHTML = timeDisplay;
-  } else if(autoTime<401){
-    timeDisplay = autoTime;
-    timeDisplay - 396;
-    document.getElementById('autoTime').innerHTML = timeDisplay;
-  } else if(autoTime<701){
-    timeDisplay = autoTime;
-    timeDisplay - 693;
-    document.getElementById('autoTime').innerHTML = timeDisplay;
-  } else {
-    document.getElementById('autoTime').innerHTML = autoTime - 999;
-  }
-
+  document.getElementById('timeDisplay').innerHTML = timeDisplay;
+  
   document.getElementById('hargaUpgrade').innerHTML = hargaUpgrade;
   document.getElementById('hargaUpgrade1').innerHTML = hargaUpgrade1;
   document.getElementById('hargaUpgrade2').innerHTML = hargaUpgrade2;
@@ -154,6 +139,21 @@ function clicking() {
 setInterval(function () {
   uang += autoClick * multiplier;
 }, autoTime); // 1000ms = 1s
+
+setInterval(function () {
+  if(autoTime<101){
+    timeDisplay = autoTime - 99;
+    
+  } else if(autoTime<401){
+    timeDisplay = autoTime - 396;
+    
+  } else if(autoTime<701){
+    timeDisplay = autoTime - 693;
+    
+  } else {
+    timeDisplay = autoTime - 999;
+  }
+}, 100);
 
 //Music =========================================================================================================================================
 
