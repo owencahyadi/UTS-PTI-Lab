@@ -22,13 +22,17 @@ var uang = 0;
 var click = 1;
 var autoClick = 0;
 
+//time
+var autoTime = 1000;
+
 //upgrade
-var hargaUpgrade = 20;
-var hargaUpgrade1 = 25;
-var hargaUpgrade2 = 50;
+var hargaUpgrade = 25;
+var hargaUpgrade1 = 100;
+var hargaUpgrade2 = 200;
 var hargaAuto = 25;
-var hargaAuto1 = 30;
-var hargaAuto2 = 60;
+var hargaAuto1 = 100;
+var hargaAuto2 = 300;
+var hargaPindah = 10000;
 
 //Update Variable ===============================================================================================================================
 setInterval(function () {
@@ -50,7 +54,7 @@ function buyAuto() {
   if (uang >= hargaAuto) {
     uang -= hargaAuto;
     autoClick += 1;
-    hargaAuto = Math.round(hargaAuto * 2);
+    hargaAuto = Math.round(hargaAuto * 1.25);
   } else {
     alert('Cari uang dulu yuk!');
   }
@@ -60,7 +64,7 @@ function buyAuto1() {
   if (uang >= hargaAuto1) {
     uang -= hargaAuto1;
     autoClick += 2;
-    hargaAuto1 = Math.round(hargaAuto1 * 2.5);
+    hargaAuto1 = Math.round(hargaAuto1 * 1.45);
   } else {
     alert('Cari uang dulu yuk!');
   }
@@ -70,7 +74,7 @@ function buyAuto2() {
   if (uang >= hargaAuto2) {
     uang -= hargaAuto2;
     autoClick += 5;
-    hargaAuto2 = Math.round(hargaAuto2 * 4);
+    hargaAuto2 = Math.round(hargaAuto2 * 1.65);
   } else {
     alert('Cari uang dulu yuk!');
   }
@@ -80,7 +84,7 @@ function upgradeClick() {
   if (uang >= hargaUpgrade) {
     uang -= hargaUpgrade;
     click += 1;
-    hargaUpgrade = Math.round(hargaUpgrade * 1.5);
+    hargaUpgrade += Math.round(hargaUpgrade * 1.15);
   } else {
     alert('Cari uang dulu yuk!');
   }
@@ -90,7 +94,7 @@ function upgradeClick1() {
   if (uang >= hargaUpgrade1) {
     uang -= hargaUpgrade1;
     click += 2;
-    hargaUpgrade1 = Math.round(hargaUpgrade1 * 2);
+    hargaUpgrade1 += Math.round(hargaUpgrade1 * 1.25);
   } else {
     alert('Cari uang dulu yuk!');
   }
@@ -100,11 +104,20 @@ function upgradeClick2() {
   if (uang >= hargaUpgrade2) {
     uang -= hargaUpgrade2;
     click += 5;
-    hargaUpgrade2 = Math.round(hargaUpgrade2 * 3);
+    hargaUpgrade2 += Math.round(hargaUpgrade2 * 1.35);
   } else {
     alert('Cari uang dulu yuk!');
   }
 }
+
+function tangerang(){
+    if (uang >= hargaPindah){
+        uang -= hargaPindah;
+        autoTime -= 300;
+        hargaPindah = hargaPindah * 10;
+    }
+}
+
 
 function clicking() {
   uang += click;
@@ -121,7 +134,7 @@ function clicking() {
 //Music ========================================================================================================================================
 setInterval(function () {
   uang += autoClick;
-}, 1000); // 1000ms = 1s
+}, autoTime); // 1000ms = 1s
 
 var musik = new Audio();
 musik.src = 'music/backsound1.mp3';
@@ -190,7 +203,10 @@ function saveGame() {
   localStorage.setItem('gameSave', JSON.stringify(gameSave));
 }
 
-function saveButton() {}
+function saveButton() {
+  saveGame();
+  alert('Game Has Been Saved!!');
+}
 
 window.onload = function () {
   loadGame();
@@ -198,7 +214,7 @@ window.onload = function () {
 
 setInterval(function () {
   saveGame();
-}, 1000); //5 detik
+}, 30000); //30 detik
 
 document.addEventListener(
   'keydown',
