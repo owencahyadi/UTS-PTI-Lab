@@ -32,17 +32,17 @@
           <ul class="sub-menu">
             <li><a class="link-name" href="#">Bahan</a></li>
             <li>
-              <a>Bumbu (+1 Harga) </a>
+              <a>Bumbu [+1 Harga] </a>
             </li>
             <button class="upgrade" onclick="upgradeClick()">Upgrade for Rp.<span id="hargaUpgrade">0</span></button>
             <li>
-              <a>Telur [Rp.<span id="hargaUpgrade1">0</span>]</a>
+              <a>Telur [+5 Harga]</a>
             </li>
-            <button class="upgrade" onclick="upgradeClick1()">Upgrade</button>
+            <button class="upgrade" onclick="upgradeClick1()">Upgrade for Rp.<span id="hargaUpgrade1">0</span></button>
             <li>
-              <a>Keju [Rp.<span id="hargaUpgrade2">0</span>]</a>
+              <a>Keju [+10 Harga]</a>
             </li>
-            <button class="upgrade" onclick="upgradeClick2()">Upgrade</button>
+            <button class="upgrade" onclick="upgradeClick2()">Upgrade for Rp.<span id="hargaUpgrade2">0</span></button>
           </ul>
         </li>
         <li>
@@ -56,17 +56,17 @@
           <ul class="sub-menu">
             <li><a class="link-name" href="#">Mobil</a></li>
             <li>
-              <a href="#">Speaker [Rp.<span id="hargaAuto">0</span>]</a>
+              <a href="#">Speaker [+1 Auto]</a>
             </li>
-            <button class="upgrade" onclick="buyAuto()">Upgrade</button>
+            <button class="upgrade" onclick="buyAuto()">Upgrade for Rp.<span id="hargaAuto">0</span></button>
             <li>
-              <a href="#">Panci [Rp.<span id="hargaAuto1">0</span>]</a>
+              <a href="#">Panci [+3 Auto]</a>
             </li>
-            <button class="upgrade" onclick="buyAuto1()">Upgrade</button>
+            <button class="upgrade" onclick="buyAuto1()">Upgrade for Rp.<span id="hargaAuto1">0</span></button>
             <li>
-              <a href="#">Tenda [Rp.<span id="hargaAuto2">0</span>]</a>
+              <a href="#">Tenda [+5 Auto]</a>
             </li>
-            <button class="upgrade" onclick="buyAuto2()">Upgrade</button>
+            <button class="upgrade" onclick="buyAuto2()">Upgrade for Rp.<span id="hargaAuto2">0</span></button>
           </ul>
         </li>
         <li>
@@ -79,8 +79,8 @@
           </div>
           <ul class="sub-menu">
             <li><a class="link-name" href="#">Cabang</a></li>
-            <li><a href="#">Tangerang</a></li>
-            <button class="upgrade" onclick="">Upgrade</button>
+            <li><a href="#">Tangerang (Efisiensi x2)</a></li>
+            <button class="upgrade" onclick="tangerang()">Upgrade for Rp.<span id="hargaPindah">0</span></button>
             <li><a href="#">Depok</a></li>
             <button class="upgrade" onclick="">Upgrade</button>
             <li><a href="#">Jogja</a></li>
@@ -138,7 +138,7 @@
         <div class="informasi">
           <p>Uang : Rp.<span id="uang">0</span></p>
           <p>Harga Tahu = Rp.<span id="click">0</span></p>
-          <p>Auto Click <span id="autoClick">0</span> Tahu/s</p>
+          <p>Auto Click <span id="autoClick">0</span> Tahu/<span id="autoTime">0</span>s</p>
         </div>
       </div>
     </section>
