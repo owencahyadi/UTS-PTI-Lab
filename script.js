@@ -120,7 +120,9 @@ function tangerang(){
         autoTime -= 300;
         multiplier += 1;
         hargaPindah = hargaPindah * 10;
+          
     }
+    
 }
 
 
