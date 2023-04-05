@@ -24,6 +24,7 @@ var multiplier = 1;
 //time
 var autoTime = 1000;
 var timeDisplay = 1;
+var Tang = 0;
 
 //upgrade
 var hargaUpgrade = 25;
@@ -120,6 +121,7 @@ function tangerang(){
         autoTime -= 300;
         multiplier += 1;
         hargaPindah = hargaPindah * 10;
+        Tang += 1;
         updateTime();
     }
     
@@ -150,9 +152,23 @@ function clicking() {
 }
 
 // Auto Clicker
-  setInterval(function () {
-    uang += autoClick * multiplier;
-  }, autoTime);
+function cabang(){
+  if (Tang == 1){
+    setInterval(function () {
+      uang += autoClick * multiplier;
+    }, 700);
+  } else if (tang == 2){
+    setInterval(function () {
+      uang += autoClick * multiplier;
+    }, 400);
+  } else if (tang == 3){
+    setInterval(function () {
+      uang += autoClick * multiplier;
+    }, 100);
+  
+}
+}
+  
 
 //Music =========================================================================================================================================
 
