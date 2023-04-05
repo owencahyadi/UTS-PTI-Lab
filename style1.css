@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #e4e9f7;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 260px;
+  background: #fff;
+  overflow: auto;
+  z-index: 100;
+  transition: all 0.5s ease;
+}
+
+.sidebar.close {
+  overflow: visible;
+}
+
+.sidebar.close {
+  width: 78px;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar .logo {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar img {
+  margin: 10px 14px;
+  margin-left: 24px;
+  width: 40px;
+}
+
+.sidebar .logo .nama-logo {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 25px;
+  color: coral;
+  transition: 0.3s ease;
+  transition-delay: 0.1s;
+}
+
+.sidebar.close .logo .nama-logo {
+  opacity: 0;
+  pointer-events: none;
+  transition-delay: 0s;
+}
+
+.sidebar .nav-links {
+  padding-top: 30px;
+  height: 100%;
+}
+
+.sidebar .nav-links li .icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar.close .nav-links li .icon-link {
+  display: block;
+}
+
+.sidebar .nav-links li {
+  list-style: none;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li:hover {
+  background: rgb(249, 200, 180);
+}
+
+.sidebar .nav-links li i {
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+  color: coral;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.sidebar .nav-links li.showMenu i.bawah {
+  transform: rotate(-180deg);
+}
+
+.sidebar.close .nav-links i.bawah {
+  display: none;
+}
+
+.sidebar .nav-links li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sidebar .nav-links li a .link-name {
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+}
+
+.sidebar.close .nav-links li a .link-name {
+  opacity: 0;
+  pointer-events: none;
+}
+
+ul {
+  padding-inline-start: 0;
+  margin-block-start: 0;
+}
+
+.sidebar .nav-links li .sub-menu {
+  padding: 6px 6px 14px 80px;
+  margin-top: -10px;
+  background: rgb(249, 200, 180);
+  display: none;
+}
+
+.sidebar .nav-links li.showMenu .sub-menu {
+  display: block;
+}
+
+.sidebar .nav-links li .sub-menu a {
+  color: black;
+  font-size: 15px;
+  padding: 5px 0;
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li .sub-menu a:hover {
+  opacity: 1;
+}
+
+.sidebar.close .nav-links li .sub-menu {
+  position: absolute;
+  left: 100%;
+  top: -10px;
+  margin-top: 0;
+  padding: 10px 20px;
+  border-radius: 0 6px 6px 0;
+  transition: all 0.4s ease;
+  opacity: 0;
+  display: block;
+  pointer-events: none;
+}
+
+.sidebar.close .nav-links li:hover .sub-menu {
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li .sub-menu .link-name {
+  display: none;
+}
+
+.sidebar.close .nav-links li .sub-menu .link-name {
+  display: none;
+}
+
+.sidebar.close .nav-links li .sub-menu .link-name {
+  font-size: 18px;
+  opacity: 1;
+  display: block;
+}
+
+.sidebar .nav-links li .sub-menu.blank {
+  opacity: 1;
+  pointer-events: auto;
+  padding: 3px 20px 6px 16px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .nav-links li:hover .sub-menu.blank {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.home-section {
+  position: relative;
+  background: #e4e9f7;
+  height: 100vh;
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+}
+
+.sidebar.close ~ .home-section {
+  left: 78px;
+  width: calc(100% - 78px);
+}
+
+.home-section .home-content {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.home-section .home-content .bx-menu,
+.home-section .home-content .text {
+  color: coral;
+  font-size: 35px;
+}
+
+.home-section .home-content .bx-menu {
+  margin: 0 15px;
+}
+
+.home-section .home-content .text {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.home-section .logo img {
+  width: 300px;
+  position: absolute;
+  bottom: 350px;
+  left: 450px;
+}
+
+.home-section .game .jalanan {
+  position: absolute;
+  pointer-events: none;
+  width: 1202px;
+  height: 400px;
+  bottom: 0;
+}
+
+.home-section .game .mobil {
+  position: absolute;
+  bottom: 30px;
+  left: 500px;
+  width: 300px;
+  cursor: pointer;
+}
+
+.home-section .game .orang {
+  position: absolute;
+  bottom: 115px;
+  width: 60px;
+  left: 700px;
+  cursor: pointer;
+}
+
+.home-section .game .toa {
+  position: absolute;
+  width: 100px;
+  bottom: 160px;
+  left: 510px;
+  cursor: pointer;
+}
+
+.home-section .game .wajan {
+  position: absolute;
+  bottom: 120px;
+  width: 50px;
+  left: 630px;
+  cursor: pointer;
+}
+
+.home-section .game .informasi {
+  position: absolute;
+  bottom: 230px;
+  left: 100px;
+}
+
+.animate {
+  animation-name: toa-animation;
+  animation-duration: 0.2s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes toa-animation {
+  from {
+    transform: scale(1.125);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.upgrade {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 10px;
+  padding: 0 18px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.upgrade:hover {
+  background-color: #fff;
+}
+
+.upgrade:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .upgrade {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+.audio button {
+  position: absolute;
+  left: 25px;
+  top: 5px;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.audio button:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+#mute {
+  background-image: url('img/unmute.png');
+  background-size: 40px 40px;
+}

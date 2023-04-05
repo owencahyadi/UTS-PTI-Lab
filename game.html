@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tahu Kotak</title>
+    <link rel="stylesheet" href="style1.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo">
+        <img src="img/logo.png" />
+        <span class="nama-logo">Tahu Kotak</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="mainMenu.html">
+            <i class="bx bx-grid-alt"></i>
+            <span class="link-name">Main Menu</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link-name" href="mainMenu.html">Main Menu</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="icon-link">
+            <a href="#">
+              <i class="bx bx-dish"></i>
+              <span class="link-name">Bahan</span>
+            </a>
+            <i class="bx bxs-down-arrow bawah"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link-name" href="#">Bahan</a></li>
+            <li>
+              <a>Bumbu (+1 Harga) </a>
+            </li>
+            <button class="upgrade" onclick="upgradeClick()">Upgrade for Rp.<span id="hargaUpgrade">0</span></button>
+            <li>
+              <a>Telur [Rp.<span id="hargaUpgrade1">0</span>]</a>
+            </li>
+            <button class="upgrade" onclick="upgradeClick1()">Upgrade</button>
+            <li>
+              <a>Keju [Rp.<span id="hargaUpgrade2">0</span>]</a>
+            </li>
+            <button class="upgrade" onclick="upgradeClick2()">Upgrade</button>
+          </ul>
+        </li>
+        <li>
+          <div class="icon-link">
+            <a href="#">
+              <i class="bx bxs-truck"></i>
+              <span class="link-name">Mobil</span>
+            </a>
+            <i class="bx bxs-down-arrow bawah"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link-name" href="#">Mobil</a></li>
+            <li>
+              <a href="#">Speaker [Rp.<span id="hargaAuto">0</span>]</a>
+            </li>
+            <button class="upgrade" onclick="buyAuto()">Upgrade</button>
+            <li>
+              <a href="#">Panci [Rp.<span id="hargaAuto1">0</span>]</a>
+            </li>
+            <button class="upgrade" onclick="buyAuto1()">Upgrade</button>
+            <li>
+              <a href="#">Tenda [Rp.<span id="hargaAuto2">0</span>]</a>
+            </li>
+            <button class="upgrade" onclick="buyAuto2()">Upgrade</button>
+          </ul>
+        </li>
+        <li>
+          <div class="icon-link">
+            <a href="#">
+              <i class="bx bx-building-house"></i>
+              <span class="link-name">Cabang</span>
+            </a>
+            <i class="bx bxs-down-arrow bawah"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link-name" href="#">Cabang</a></li>
+            <li><a href="#">Tangerang</a></li>
+            <li><a href="#">Depok</a></li>
+            <li><a href="#">Jogja</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="aboutUs.html">
+            <i class="bx bx-id-card"></i>
+            <span class="link-name">About Us</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link-name" href="aboutUs.html">About Us</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" onclick="saveButton()">
+            <i class='bx bxs-save'></i>
+            <span class="link-name">Save</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link-name" href="#" onclick="saveButton()">Save</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" onclick="resetGame()">
+            <i class='bx bx-reset'></i>
+            <span class="link-name">Reset</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link-name" href="#" onclick="resetGame()">Reset</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="audio">
+            <button id="mute"></button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div class="home-content">
+        <i class="bx bx-menu"></i>
+        <span class="text">Menu</span>
+      </div>
+      <div class="logo">
+        <img src="img/tahukotak.png" />
+      </div>
+      <div class="game">
+        <img class="jalanan" src="img/background.jpg" />
+        <img class="orang" src="img/pedagang.png" onclick="clicking()" />
+        <img class="toa" src="img/toa.png" onclick="clicking()" />
+        <img class="wajan" src="img/wajan.png" onclick="clicking()" />
+        <img class="mobil" src="img/mobil.png" onclick="clicking()" />
+        <div class="informasi">
+          <p>Uang : Rp.<span id="uang">0</span></p>
+          <p>Harga Tahu = Rp.<span id="click">0</span></p>
+          <p>Auto Click <span id="autoClick">0</span> Tahu/s</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
