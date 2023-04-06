@@ -28,11 +28,11 @@ var timeDisplay = 1;
 //upgrade
 var hargaUpgrade = 25;
 var hargaUpgrade1 = 250;
-var hargaUpgrade2 = 1000;
+var hargaUpgrade2 = 800;
 
 var hargaAuto = 35;
 var hargaAuto1 = 300;
-var hargaAuto2 = 500;
+var hargaAuto2 = 5  00;
 
 var hargaPindah = 10000;
 
@@ -58,7 +58,7 @@ function buyAuto() {
   if (uang >= hargaAuto) {
     uang -= hargaAuto;
     autoClick += 1;
-    hargaAuto += Math.round(hargaAuto * 0.35);
+    hargaAuto += Math.round(hargaAuto * 0.15);
   } else {
     alert('Cari uang dulu yuk!');
   }
@@ -68,7 +68,7 @@ function buyAuto1() {
   if (uang >= hargaAuto1) {
     uang -= hargaAuto1;
     autoClick += 3;
-    hargaAuto1 += Math.round(hargaAuto1 * 0.52);
+    hargaAuto1 += Math.round(hargaAuto1 * 0.25);
   } else {
     alert('Cari uang dulu yuk!');
   }
@@ -78,7 +78,7 @@ function buyAuto2() {
   if (uang >= hargaAuto2) {
     uang -= hargaAuto2;
     autoClick += 5;
-    hargaAuto2 += Math.round(hargaAuto2 * 0.6);
+    hargaAuto2 += Math.round(hargaAuto2 * 0.35);
   } else {
     alert('Cari uang dulu yuk!');
   }
@@ -88,7 +88,7 @@ function upgradeClick() {
   if (uang >= hargaUpgrade) {
     uang -= hargaUpgrade;
     click += 1;
-    hargaUpgrade += Math.round(hargaUpgrade * 0.35);
+    hargaUpgrade += Math.round(hargaUpgrade * 0.15);
   } else {
     alert('Cari uang dulu yuk!');
   }
@@ -98,7 +98,7 @@ function upgradeClick1() {
   if (uang >= hargaUpgrade1) {
     uang -= hargaUpgrade1;
     click += 5;
-    hargaUpgrade1 += Math.round(hargaUpgrade1 * 0.55);
+    hargaUpgrade1 += Math.round(hargaUpgrade1 * 0.25);
   } else {
     alert('Cari uang dulu yuk!');
   }
@@ -108,7 +108,7 @@ function upgradeClick2() {
   if (uang >= hargaUpgrade2) {
     uang -= hargaUpgrade2;
     click += 10;
-    hargaUpgrade2 += Math.round(hargaUpgrade2 * 0.65);
+    hargaUpgrade2 += Math.round(hargaUpgrade2 * 0.25);
   } else {
     alert('Cari uang dulu yuk!');
   }
@@ -122,6 +122,7 @@ function tangerang(){
         hargaPindah = hargaPindah * 10;
         updateTime();
     }
+    
 }
 
 function updateTime(){
@@ -149,8 +150,9 @@ function clicking() {
 }
 
 // Auto Clicker
-  setInterval(function () {
+  setTimeout(function autoClicker() {
     uang += autoClick * multiplier;
+    setTimeout(autoClicker, autoTime);  
   }, autoTime);
 
 //Music =========================================================================================================================================
