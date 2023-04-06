@@ -246,6 +246,13 @@ ul {
   bottom: 0;
 }
 
+.home-section .game .notif {
+  position: absolute;
+  width: 200px;
+  left: 580px;
+  top: 250px;
+}
+
 .home-section .game .mobil {
   position: absolute;
   bottom: 30px;
@@ -394,6 +401,13 @@ ul {
     width: 50px;
     left: 420px !important;
     cursor: pointer;
+  }
+
+  .home-section .game .notif {
+    position: absolute;
+    width: 200px;
+    left: 250px !important;
+    top: 250px;
   }
 }
 
