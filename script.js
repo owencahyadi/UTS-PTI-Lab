@@ -145,6 +145,8 @@ function bukaCabang(){
         cabang += 1;
         updateTime();
         cabangDisplay();
+    } else {
+      alert('Cari uang dulu yuk!');
     }
 }
 
