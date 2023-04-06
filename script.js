@@ -38,8 +38,11 @@ var cabang = 0;
 var hargaCabang = 10000;
 var displayCabang = document.getElementById('displayCabang');
 
+//gold rush
 var rush = 0;
 var rushCounter = 0;
+var bar = document.getElementById('GoldRush');
+var width = 0;
 
 //Update Variable ===============================================================================================================================
 setInterval(function () {
@@ -169,7 +172,9 @@ function clicking() {
   if(rush==1){
     uang += (click * multiplier) * 2;
   }else{
+    width += 10;
     uang += click * multiplier;
+    bar.style.width = width + "px";
     rushCounter += 1;
     rushProgress();
   }

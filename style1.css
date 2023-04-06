@@ -355,3 +355,14 @@ ul {
   background-image: url('img/unmute.png');
   background-size: 40px 40px;
 }
+
+#progress {
+  width : 200px;
+  background-color: #000;
+}
+
+#GoldRush {
+  width: 0px;
+  height: 30px;
+  background-color: #04AA6D;
+}
