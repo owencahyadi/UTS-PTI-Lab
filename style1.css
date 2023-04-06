@@ -250,7 +250,9 @@ ul {
   position: absolute;
   width: 200px;
   left: 580px;
-  top: 250px;
+  top: 300px;
+  font-size: 30px;
+  font-weight: 500;
 }
 
 .home-section .game .mobil {
