@@ -37,6 +37,7 @@ var hargaAuto2 = 2500;
 var cabang = 0;
 var hargaCabang = 10000;
 var displayCabang = document.getElementById('displayCabang');
+var displayRush = document.getElementById('displayRush');
 
 //gold rush
 var rush = 0;
@@ -55,6 +56,7 @@ setInterval(function () {
   document.getElementById('click').innerHTML = click * multiplier;
   document.getElementById('autoClick').innerHTML = autoClick * multiplier;
   document.getElementById('timeDisplay').innerHTML = timeDisplay;
+
   document.getElementById('multiplier').innerHTML = multiplier + multiplier;
 
   
@@ -172,34 +174,44 @@ function clicking() {
   if(rush==1){
     uang += (click * multiplier) * 2;
   }else{
-    width += 5;
+    width += 8.5;
     uang += click * multiplier;
     bar.style.width = width + "px";
     rushCounter += 1;
     rushProgress();
+    rushDisplay();
   }
   
   function rushProgress(){
-    if(rushCounter == 200 || rush == 1){
+    if(rushCounter == 101 || rush == 1){
       rush += 1;
+      rushDisplay();
       if(rushCounter > 0 && rush == 1){
         rushing = setInterval(function rushTime() {
           if (rushCounter == 0){
             rush -= 1;
             clearInterval(rushing);
           } else{
-            width -= 5;
+            width -= 8.5;
             bar.style.width = width + "px";
             rushCounter -= 1;
           }
         }, 100);
     }else if(rushCounter == 0){
       rush = 0;
+      
     }
   } 
   }
 
-
+  function rushDisplay(){
+    if(rush==1){
+      displayRush.innerHTML = "!! RUSH !! Harga Tahu x 2!";
+    } else{
+      displayRush.innerHTML = " ";
+    }
+    
+  }
 
   // tambahkan kelas "animate" ke gambar toa
   document.querySelector('.toa').classList.add('animate');
