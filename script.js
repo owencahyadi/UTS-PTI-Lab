@@ -15,8 +15,8 @@ sidebarBtn.addEventListener('click', () => {
   sidebar.classList.toggle('close');
 });
 
-//currency=======================================================================================================================================
-var uang = 10000000;
+//currency ======================================================================================================================================
+var uang = 0;
 var click = 1;
 var autoClick = 0;
 var multiplier = 1;
@@ -27,21 +27,33 @@ var timeDisplay = 1;
 
 //upgrade
 var hargaUpgrade = 25;
-var hargaUpgrade1 = 250;
-var hargaUpgrade2 = 800;
+var hargaUpgrade1 = 500;
+var hargaUpgrade2 = 5000;
 
-var hargaAuto = 35;
-var hargaAuto1 = 300;
-var hargaAuto2 = 5  00;
+var hargaAuto = 50;
+var hargaAuto1 = 500;
+var hargaAuto2 = 2500;
 
-var hargaPindah = 10000;
+var cabang = 0;
+var hargaCabang = 10000;
+var displayCabang = document.getElementById('displayCabang');
+
+var rush = 0;
+var rushCounter = 0;
 
 //Update Variable ===============================================================================================================================
 setInterval(function () {
   document.getElementById('uang').innerHTML = uang;
+  document.getElementById('rushCounter').innerHTML = rushCounter;
+
+}, 50);
+
+setInterval(function () {
   document.getElementById('click').innerHTML = click * multiplier;
   document.getElementById('autoClick').innerHTML = autoClick * multiplier;
   document.getElementById('timeDisplay').innerHTML = timeDisplay;
+  document.getElementById('multiplier').innerHTML = multiplier + multiplier;
+
   
   document.getElementById('hargaUpgrade').innerHTML = hargaUpgrade;
   document.getElementById('hargaUpgrade1').innerHTML = hargaUpgrade1;
@@ -50,15 +62,20 @@ setInterval(function () {
   document.getElementById('hargaAuto').innerHTML = hargaAuto;
   document.getElementById('hargaAuto1').innerHTML = hargaAuto1;
   document.getElementById('hargaAuto2').innerHTML = hargaAuto2;
-  document.getElementById('hargaPindah').innerHTML = hargaPindah;
-}, 50); // Update Variable setiap 0.1s
+
+  document.getElementById('hargaCabang').innerHTML = hargaCabang;
+
+  
+
+  
+}, 200); // Update Variable setiap 0.1s
 
 //Game Mechanic =================================================================================================================================
 function buyAuto() {
   if (uang >= hargaAuto) {
     uang -= hargaAuto;
     autoClick += 1;
-    hargaAuto += Math.round(hargaAuto * 0.15);
+    hargaAuto += Math.round(hargaAuto * 0.125);
   } else {
     alert('Cari uang dulu yuk!');
   }
@@ -67,8 +84,8 @@ function buyAuto() {
 function buyAuto1() {
   if (uang >= hargaAuto1) {
     uang -= hargaAuto1;
-    autoClick += 3;
-    hargaAuto1 += Math.round(hargaAuto1 * 0.25);
+    autoClick += 4;
+    hargaAuto1 += Math.round(hargaAuto1 * 0.175);
   } else {
     alert('Cari uang dulu yuk!');
   }
@@ -77,8 +94,8 @@ function buyAuto1() {
 function buyAuto2() {
   if (uang >= hargaAuto2) {
     uang -= hargaAuto2;
-    autoClick += 5;
-    hargaAuto2 += Math.round(hargaAuto2 * 0.35);
+    autoClick += 7;
+    hargaAuto2 += Math.round(hargaAuto2 * 0.225);
   } else {
     alert('Cari uang dulu yuk!');
   }
@@ -88,7 +105,7 @@ function upgradeClick() {
   if (uang >= hargaUpgrade) {
     uang -= hargaUpgrade;
     click += 1;
-    hargaUpgrade += Math.round(hargaUpgrade * 0.15);
+    hargaUpgrade += Math.round(hargaUpgrade * 0.125);
   } else {
     alert('Cari uang dulu yuk!');
   }
@@ -98,7 +115,7 @@ function upgradeClick1() {
   if (uang >= hargaUpgrade1) {
     uang -= hargaUpgrade1;
     click += 5;
-    hargaUpgrade1 += Math.round(hargaUpgrade1 * 0.25);
+    hargaUpgrade1 += Math.round(hargaUpgrade1 * 0.175);
   } else {
     alert('Cari uang dulu yuk!');
   }
@@ -108,21 +125,32 @@ function upgradeClick2() {
   if (uang >= hargaUpgrade2) {
     uang -= hargaUpgrade2;
     click += 10;
-    hargaUpgrade2 += Math.round(hargaUpgrade2 * 0.25);
+    hargaUpgrade2 += Math.round(hargaUpgrade2 * 0.225);
   } else {
     alert('Cari uang dulu yuk!');
   }
 }
 
-function tangerang(){
-    if (uang >= hargaPindah){
-        uang -= hargaPindah;
+function bukaCabang(){
+    if (uang >= hargaCabang){
+        uang -= hargaCabang;
         autoTime -= 300;
-        multiplier += 1;
-        hargaPindah = hargaPindah * 10;
+        multiplier += multiplier;
+        hargaCabang = hargaCabang * 5;
+        cabang += 1;
         updateTime();
+        cabangDisplay();
     }
-    
+}
+
+function cabangDisplay(){
+  if(cabang==1){
+	displayCabang.innerHTML = "Depok";
+  } else if(cabang>1){
+    displayCabang.innerHTML = "Bali";
+  } else {
+    displayCabang.innerHTML = "Tangerang";
+  }
 }
 
 function updateTime(){
@@ -138,7 +166,26 @@ function updateTime(){
 }
 
 function clicking() {
-  uang += click * multiplier;
+  if(rush==1){
+    uang += (click * multiplier) * 2;
+  }else{
+    uang += click * multiplier;
+    rushCounter += 1;
+    rushProgress();
+  }
+  
+  function rushProgress(){
+    if(rushCounter == 20 || rush == 1){
+      rush += 1;
+      if(rushCounter > 0 && rush == 1){
+        setTimeout(function () {
+          rushCounter -= 1;
+        }, 100);
+    }else if(rushCounter == 0){
+      rush = 0;
+    }
+  } 
+  }
 
   // tambahkan kelas "animate" ke gambar toa
   document.querySelector('.toa').classList.add('animate');
@@ -201,7 +248,10 @@ function loadGame() {
   if (typeof gameLoad.hargaAuto !== 'undefined') hargaAuto = gameLoad.hargaAuto;
   if (typeof gameLoad.hargaAuto1 !== 'undefined') hargaAuto1 = gameLoad.hargaAuto1;
   if (typeof gameLoad.hargaAuto2 !== 'undefined') hargaAuto2 = gameLoad.hargaAuto2;
-  if (typeof gameLoad.hargaPindah !== 'undefined') hargaPindah = gameLoad.hargaPindah;
+
+  if (typeof gameLoad.cabang !== 'undefined') cabang = gameLoad.cabang;
+  if (typeof gameLoad.hargaCabang !== 'undefined') hargaCabang = gameLoad.hargaCabang;
+  if (typeof gameLoad.displayCabang !== 'undefined') displayCabang = gameLoad.displayCabang;
 }
 
 function resetGame() {
@@ -228,7 +278,11 @@ function saveGame() {
     hargaAuto: hargaAuto,
     hargaAuto1: hargaAuto1,
     hargaAuto2: hargaAuto2,
-    hargaPindah: hargaPindah
+    
+    cabang:cabang,
+    hargaCabang: hargaCabang,
+    displayCabang: displayCabang
+
   };
   localStorage.setItem('gameSave', JSON.stringify(gameSave));
 }
@@ -254,5 +308,3 @@ document.addEventListener('keydown',function (event) {
     }
   },false
 ); //disable ctrl+s
-
-
