@@ -16,7 +16,7 @@ sidebarBtn.addEventListener('click', () => {
 });
 
 //currency ======================================================================================================================================
-var uang = 999999999999990;
+var uang = 0;
 var click = 1;
 var autoClick = 0;
 var multiplier = 1;
@@ -28,7 +28,7 @@ var timeDisplay = 1;
 
 //upgrade
 var hargaUpgrade = 25;
-var hargaUpgrade1 = 500;
+var hargaUpgrade1 = 400;
 var hargaUpgrade2 = 5000;
 
 var hargaAuto = 50;
@@ -328,7 +328,7 @@ window.onload = function () {
 
 setInterval(function () {
   saveGame();
-}, 30000); //30 detik
+}, 60000); //60 detik
 
 document.addEventListener('keydown',function (event) {
     if (event.ctrlKey && event.which == 83) {//ctrl + s
