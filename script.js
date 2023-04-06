@@ -56,7 +56,6 @@ setInterval(function () {
   document.getElementById('click').innerHTML = click * multiplier;
   document.getElementById('autoClick').innerHTML = autoClick * multiplier;
   document.getElementById('timeDisplay').innerHTML = timeDisplay;
-
   document.getElementById('multiplier').innerHTML = multiplier + multiplier;
 
   
