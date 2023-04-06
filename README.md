@@ -12,15 +12,17 @@ Semua memiliki jobdesk yang setara dan sesuai, tidak ada yang lebih, tidak ada y
 
 Link GitHub: https://github.com/owencahyadi/UTS-PTI-Lab.git
 
+Link Video Demo Website: 
+
 Description:
 Selamat datang di permainan idle clicker Tahu Kotak. Pada Main Menu Kamu akan memulai perjalanan untuk berjualan tahu kotak di Jakarta. Kamu dapat scroll kebawah untuk memulai permainan dengan menekan tombol start. 
 
 Ketika memulai permainan, kamu akan berjualan Tahu Kotak seharga Rp.1. Cara kamu berjualan adalah dengan "mengklik mobil". Ketika uang bertambah terdapat animasi pada toa yang menandakan Tahu Kotakmu sudah terjual. Cara kamu untuk mendapatkan uang tidak hanya dengan mengklik mobil, tetapi terdapat beberapa fitur upgrade yang mempermudah kamu mendapatkan uang lebih banyak dan pastinya bikin kamu makin tajir. Upgrade yang dapat kamu lakukan antara lain :
 1. Upgrade Bahan : Tujuan dari upgrade bahan ini adalah untuk membuat harga tahu kotak kamu bertambah setiap kali di klik. Terdapat 3 bahan yang dapat kamu upgrade dan pastinya setiap upgrade bahan memiliki keuntungannya masing-masing.
-2. Upgrade Iklan : Tujuan dari upgrade Iklan ini adalah untuk menarik perhatian pelanggan dan meningkatkan pesanan online kamu. Semakin banyak pesanan online kamu, semakin banyak passive income yang akan kamu dapat (Auto). Terdapat 3 jenis iklan yang dapat kamu beli & tingkatkan
+2. Upgrade Iklan : Tujuan dari upgrade Iklan ini adalah untuk menarik perhatian pelanggan dan meningkatkan pesanan online kamu. Semakin banyak pesanan online kamu, semakin banyak passive income yang akan kamu dapat (Auto). Terdapat 3 jenis iklan yang dapat kamu beli & tingkatkan.
 3. Buka Cabang : Tujuan dari buka cabang adalah untuk menambahkan kecepatan auto click kamu. Semakin banyak cabang yang kamu buka, maka kamu akan kamu akan mendapatkan pasif income yang semakin cepat (interval auto click semakin cepat).
 4. Gold Rush : Ketika bar click mu penuh, kamu akan memasuki gold rush, dimana penghasilan klik kamu akan dikalikan dengan 2. Durasi Gold rush akan berlangsung selama bar kamu berkurang sampai 0. 
-5. Save : Kamu tidak perlu taku dagangan kamu akan hilang, karena terdapat fitur save. Meskipun kamu keluar dari game, maka data dagangan mu akan tetap tersimpan.
+5. Save : Kamu tidak perlu takut dagangan kamu akan hilang, karena terdapat fitur save. Meskipun kamu keluar dari game, maka data dagangan mu akan tetap tersimpan. Walaupunkamu lupa, terdapat fitur Auto-save setiap 1 menit :D. Enjoy~
 6. Reset : Terdapat fitur reset buat kamu yang ingin memulai dagangan tahu kotak dari awal lagi.
 
 Selama kamu berjualan, kamu juga akan ditemani oleh lagu daerah di Indonesia. Terdapat fitur mute juga buat kamu yang ingin bermain tahu kotak tanpa lagu. 
