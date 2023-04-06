@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x:hidden;
+    color: white;
+    font-family: sans-serif;
+
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    position: absolute;
+    bottom: 0;
+}
+
+.content{
+    background-color: #1d1d4f;
+    padding: 5px;
+    position: relative;
+}
+
+h1{
+    text-align: center;
+    margin: 40px 0;
+}
+
+p{
+    text-align: justify;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-indent: 50px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    opacity: 0,7;
+}
+
+.layer-3{
+    position: absolute;
+}
+
+.layer-3 h1 {
+    margin-top: 80px;
+}
+
+.layer-3 p{
+    
+    text-indent: 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.logo{
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    width: 50px;
+}
+
+.bangunan{
+    position: absolute;
+    top: 110px;
+    left: 550px;
+    width: 300px;
+    pointer-events: none;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+.card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
+
+.card:hover{
+    height: 400px;
+}
+
+.card .imgBx{
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card:hover .imgBx{
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.card .informasi{
+    color: black;
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    padding: 0 30px;
+    height: 35px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+}
+
+ul{
+    margin-top:10px ;
+    list-style: none;
+    color: #333;
+    font-size: 1.05em;
+}
+
+.card:hover .informasi{
+    height: 250px;
+    top: 130px;
+}
+
+.card .informasi h2{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--clr);
+}
+
+.container1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+.maincontainer{
+    position: relative;
+    margin-left: 500px;
+    width: 250px;
+    height: 320px;
+}
+
+.thecard{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style:preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.thecard:hover{
+    transform: rotateY(180deg);
+
+}
+
+.thefront{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #ffc728;
+    color: #333;
+    font-weight: 500;
+    font-size: 40px;
+    border-radius: 12px;
+    font-family: 'Delicious Handrawn', cursive;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theback{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #fafafa;
+    color: #333;
+    transform: rotateY(180deg);
+    border-radius: 12px;
+    padding: 5px 5px 0 5px;
+    font-size: 12px;
+}
+
+.theback li{
+    margin-top: 10px;
+}
+
+.button-pushable {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+    );
+}
+
+.button-front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+    .button-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+    }
+}
+
+.button-pushable:hover {
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+}
+
+.button-pushable:hover .button-82-front {
+    transform: translateY(-6px);
+    transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-pushable:active .button-82-front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.button-pushable:hover .button-82-shadow {
+    transform: translateY(4px);
+    transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-pushable:active .button-82-shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.button-pushable:focus:not(:focus-visible) {
+    outline: none;
+}
+
+button{
+    position: absolute;
+    top: 20px;
+    right: 300px;
+}
+
+@media (max-width: 720px){
+    .maincontainer{
+        position: relative;
+        margin-left: 185px !important; 
+        width: 250px;
+        height: 320px;
+    }
+}
