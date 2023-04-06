@@ -178,14 +178,21 @@ function clicking() {
     if(rushCounter == 20 || rush == 1){
       rush += 1;
       if(rushCounter > 0 && rush == 1){
-        setTimeout(function () {
-          rushCounter -= 1;
+        rushing = setInterval(function rushTime() {
+          if (rushCounter == 0){
+            rush -= 1;
+            clearInterval(rushing);
+          } else{
+            rushCounter -= 1;
+          }
         }, 100);
     }else if(rushCounter == 0){
       rush = 0;
     }
   } 
   }
+
+
 
   // tambahkan kelas "animate" ke gambar toa
   document.querySelector('.toa').classList.add('animate');
