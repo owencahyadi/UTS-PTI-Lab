@@ -250,7 +250,7 @@ ul {
   position: absolute;
   bottom: 30px;
   left: 500px;
-  width: 300px;
+  width: 350px;
   cursor: pointer;
 }
 
@@ -258,15 +258,15 @@ ul {
   position: absolute;
   bottom: 115px;
   width: 60px;
-  left: 700px;
+  left: 790px;
   cursor: pointer;
 }
 
 .home-section .game .toa {
   position: absolute;
   width: 100px;
-  bottom: 160px;
-  left: 510px;
+  bottom: 140px;
+  left: 550px;
   cursor: pointer;
 }
 
@@ -274,7 +274,7 @@ ul {
   position: absolute;
   bottom: 120px;
   width: 50px;
-  left: 630px;
+  left: 730px;
   cursor: pointer;
 }
 
@@ -356,13 +356,43 @@ ul {
   background-size: 40px 40px;
 }
 
-#progress {
-  width : 200px;
-  background-color: #000;
-}
+@media (max-width: 720px){
+  .home-section .logo img {
+    width: 300px;
+    position: absolute;
+    bottom: 350px;
+    left: 150px !important;
+  }
 
-#GoldRush {
-  width: 0px;
-  height: 30px;
-  background-color: #04AA6D;
+  .home-section .game .mobil {
+    position: absolute;
+    bottom: 30px;
+    left: 190px !important;
+    width: 350px;
+    cursor: pointer;
+  }
+
+  .home-section .game .orang {
+    position: absolute;
+    bottom: 115px;
+    width: 60px;
+    left: 470px !important;
+    cursor: pointer;
+  }
+
+  .home-section .game .toa {
+    position: absolute;
+    width: 100px;
+    bottom: 140px;
+    left: 250px !important;
+    cursor: pointer;
+  }
+
+  .home-section .game .wajan {
+    position: absolute;
+    bottom: 120px;
+    width: 50px;
+    left: 420px !important;
+    cursor: pointer;
+  }
 }
