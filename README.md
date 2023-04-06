@@ -12,8 +12,6 @@ Semua memiliki jobdesk yang setara dan sesuai, tidak ada yang lebih, tidak ada y
 
 Link GitHub: 
 
-Link Video Demo Website: 
-
 Description:
 Selamat datang di permainan idle clicker Tahu Kotak. Pada Main Menu Kamu akan memulai perjalanan untuk berjualan tahu kotak di Jakarta. Kamu dapat scroll kebawah untuk memulai permainan dengan menekan tombol start. 
 
