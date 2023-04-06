@@ -172,7 +172,7 @@ function clicking() {
   if(rush==1){
     uang += (click * multiplier) * 2;
   }else{
-    width += 10;
+    width += 5;
     uang += click * multiplier;
     bar.style.width = width + "px";
     rushCounter += 1;
@@ -180,7 +180,7 @@ function clicking() {
   }
   
   function rushProgress(){
-    if(rushCounter == 20 || rush == 1){
+    if(rushCounter == 200 || rush == 1){
       rush += 1;
       if(rushCounter > 0 && rush == 1){
         rushing = setInterval(function rushTime() {
@@ -188,7 +188,7 @@ function clicking() {
             rush -= 1;
             clearInterval(rushing);
           } else{
-            width -= 10;
+            width -= 5;
             bar.style.width = width + "px";
             rushCounter -= 1;
           }
