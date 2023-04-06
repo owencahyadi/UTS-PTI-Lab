@@ -16,10 +16,11 @@ sidebarBtn.addEventListener('click', () => {
 });
 
 //currency ======================================================================================================================================
-var uang = 0;
+var uang = 999999999999990;
 var click = 1;
 var autoClick = 0;
 var multiplier = 1;
+var displayClick = document.getElementById('displayClick');
 
 //time
 var autoTime = 1000;
@@ -36,7 +37,7 @@ var hargaAuto2 = 2500;
 
 var cabang = 0;
 var hargaCabang = 10000;
-var displayCabang = document.getElementById('displayCabang');
+var displayCabang = 'Tangerang';
 var displayRush = document.getElementById('displayRush');
 
 //gold rush
@@ -56,6 +57,7 @@ setInterval(function () {
   document.getElementById('click').innerHTML = click * multiplier;
   document.getElementById('autoClick').innerHTML = autoClick * multiplier;
   document.getElementById('timeDisplay').innerHTML = timeDisplay;
+  document.getElementById('displayCabang').innerHTML = displayCabang;
   document.getElementById('multiplier').innerHTML = multiplier + multiplier;
 
   
@@ -68,8 +70,6 @@ setInterval(function () {
   document.getElementById('hargaAuto2').innerHTML = hargaAuto2;
 
   document.getElementById('hargaCabang').innerHTML = hargaCabang;
-
-  
 
   
 }, 200); // Update Variable setiap 0.1s
@@ -144,19 +144,19 @@ function bukaCabang(){
         cabang += 1;
         updateTime();
         cabangDisplay();
-    } else {
+    }else {
       alert('Cari uang dulu yuk!');
     }
-}
+  }
 
 function cabangDisplay(){
   if(cabang==1){
-	displayCabang.innerHTML = "Depok";
-  } else if(cabang>1){
-    displayCabang.innerHTML = "Bali";
-  } else {
-    displayCabang.innerHTML = "Tangerang";
-  }
+	displayCabang = "Depok";
+  } else if(cabang==2){
+    displayCabang = "Bali";
+  } else if(cabang==3){
+    displayCabang = "Denpasar";
+  } 
 }
 
 function updateTime(){
@@ -182,6 +182,7 @@ function clicking() {
     rushProgress();
     rushDisplay();
   }
+
   
   function rushProgress(){
     if(rushCounter == 101 || rush == 1){
@@ -226,8 +227,9 @@ function clicking() {
 // Auto Clicker
   setTimeout(function autoClicker() {
     uang += autoClick * multiplier;
+    updateTime();
     setTimeout(autoClicker, autoTime);  
-  }, autoTime);
+  }, 1000);
 
 //Music =========================================================================================================================================
 
@@ -264,6 +266,7 @@ function loadGame() {
   if (typeof gameLoad.click !== 'undefined') click = gameLoad.click;
   if (typeof gameLoad.autoClick !== 'undefined') autoClick = gameLoad.autoClick;
   if (typeof gameLoad.multiplier !== 'undefined') multiplier = gameLoad.multiplier;
+
 
   if (typeof gameLoad.autoTime !== 'undefined') autoTime = gameLoad.autoTime;
 
