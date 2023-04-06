@@ -396,3 +396,13 @@ ul {
     cursor: pointer;
   }
 }
+
+#progress {
+  width : 200px;
+  background-color: #000;
+}
+
+#GoldRush {
+  width: 0px;
+  height: 30px;
+  background-color: #04AA6D;
