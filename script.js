@@ -188,6 +188,8 @@ function clicking() {
             rush -= 1;
             clearInterval(rushing);
           } else{
+            width -= 10;
+            bar.style.width = width + "px";
             rushCounter -= 1;
           }
         }, 100);
