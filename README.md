@@ -10,6 +10,9 @@ List Nama Kelompok:
 DISCLAIMER: 
 Semua memiliki jobdesk yang setara dan sesuai, tidak ada yang lebih, tidak ada yang kurang, semua memiliki jobdesknya masing-masing.
 
+NOTES:
+Jika ada bug pada visual bisa coba di zoom in atau zoom out
+
 Link GitHub: https://github.com/owencahyadi/UTS-PTI-Lab.git
 
 Link Video Demo Website: 
