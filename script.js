@@ -32,7 +32,7 @@ var hargaUpgrade2 = 800;
 
 var hargaAuto = 35;
 var hargaAuto1 = 300;
-var hargaAuto2 = 5  00;
+var hargaAuto2 = 500;
 
 var hargaPindah = 10000;
 
